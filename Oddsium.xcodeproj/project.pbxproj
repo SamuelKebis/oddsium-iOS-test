@@ -10,7 +10,7 @@
 		9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2D42983C5B50056017F /* OddsiumApp.swift */; };
 		9438A2D92983C5B70056017F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2D82983C5B70056017F /* Assets.xcassets */; };
 		9438A2DC2983C5B70056017F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2DB2983C5B70056017F /* Preview Assets.xcassets */; };
-		9438A2E72983D25F0056017F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2E62983D25E0056017F /* DashboardView.swift */; };
+		9438A2E72983D25F0056017F /* DashboardTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2E62983D25E0056017F /* DashboardTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +18,7 @@
 		9438A2D42983C5B50056017F /* OddsiumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsiumApp.swift; sourceTree = "<group>"; };
 		9438A2D82983C5B70056017F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9438A2DB2983C5B70056017F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9438A2E62983D25E0056017F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		9438A2E62983D25E0056017F /* DashboardTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 		9438A2EA2983D2800056017F /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				9438A2E62983D25E0056017F /* DashboardView.swift */,
+				9438A2E62983D25E0056017F /* DashboardTabView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9438A2E72983D25F0056017F /* DashboardView.swift in Sources */,
+				9438A2E72983D25F0056017F /* DashboardTabView.swift in Sources */,
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
