@@ -9,3 +9,12 @@
          output: Oddsium/Presentation/Resources/Images/Assets+Generated.swift
          params:
            enumName: Images
+
+ strings:
+   inputs:
+     - Oddsium/Presentation/Resources/Strings/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Oddsium/Presentation/Resources/Strings/Strings+Generated.swift
+       params:
+         enumName: Copy

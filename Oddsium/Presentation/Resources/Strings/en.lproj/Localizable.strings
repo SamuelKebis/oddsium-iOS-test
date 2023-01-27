@@ -1,0 +1,15 @@
+/*
+  Localizable.strings
+  Oddsium
+
+  Created by Samuel Kebis on 27/01/2023.
+  
+*/
+
+// MARK: - Tabs
+
+"tab.myBets" = "My Bets";
+"tab.allMatches" = "All Matches";
+"tab.menu" = "Menu";
+"tab.calendar" = "Calendar";
+"tab.favourites" = "Favourites";

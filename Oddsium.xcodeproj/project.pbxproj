@@ -14,6 +14,8 @@
 		9438A2F029840EC90056017F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2EF29840EC90056017F /* Assets.xcassets */; };
 		9438A2F329841A630056017F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2F229841A630056017F /* swiftgen.yml */; };
 		9438A2F529841AFB0056017F /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2F429841AFB0056017F /* Assets+Generated.swift */; };
+		9438A2FD29841F690056017F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2FB29841F690056017F /* Localizable.strings */; };
+		9438A2FF298420260056017F /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2FE298420260056017F /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		9438A2EF29840EC90056017F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9438A2F229841A630056017F /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		9438A2F429841AFB0056017F /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
+		9438A2FC29841F690056017F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		9438A2FE298420260056017F /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +113,9 @@
 		9438A2EE29840E930056017F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9438A2F229841A630056017F /* swiftgen.yml */,
 				9438A2F629841B080056017F /* Images */,
+				9438A2F729841CBF0056017F /* Strings */,
+				9438A2F229841A630056017F /* swiftgen.yml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -122,6 +127,23 @@
 				9438A2EF29840EC90056017F /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		9438A2F729841CBF0056017F /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9438A2FA29841F690056017F /* en.lproj */,
+				9438A2FE298420260056017F /* Strings+Generated.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		9438A2FA29841F690056017F /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9438A2FB29841F690056017F /* Localizable.strings */,
+			);
+			path = en.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9438A2FD29841F690056017F /* Localizable.strings in Resources */,
 				9438A2DC2983C5B70056017F /* Preview Assets.xcassets in Resources */,
 				9438A2D92983C5B70056017F /* Assets.xcassets in Resources */,
 				9438A2F029840EC90056017F /* Assets.xcassets in Resources */,
@@ -242,11 +265,23 @@
 			files = (
 				9438A2E72983D25F0056017F /* DashboardTabView.swift in Sources */,
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
+				9438A2FF298420260056017F /* Strings+Generated.swift in Sources */,
 				9438A2F529841AFB0056017F /* Assets+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9438A2FB29841F690056017F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9438A2FC29841F690056017F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9438A2DD2983C5B70056017F /* Debug */ = {
