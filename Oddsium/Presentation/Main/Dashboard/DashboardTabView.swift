@@ -44,7 +44,7 @@ private extension DashboardTabView.Tab {
         case .allMatches:
             return Image(systemName: "globe")
         case .menu:
-            return Image("tabHome")
+            return Images.tabHome.swiftUIImage
                 .renderingMode(.template)
         case .calendar:
             return Image(systemName: "calendar")
