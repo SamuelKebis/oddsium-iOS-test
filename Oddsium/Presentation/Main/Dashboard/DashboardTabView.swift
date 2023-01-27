@@ -7,43 +7,84 @@
 
 import SwiftUI
 
+extension DashboardTabView {
+    enum Tab: CaseIterable {
+        case myBets
+        case allMatches
+        case menu
+        case calendar
+        case favourites
+    }
+}
+
 struct DashboardTabView: View {
-    @State private var selection = 1
+    @State private var selection: Tab = .calendar
     
     var body: some View {
         TabView(selection: $selection) {
-            Text("My Bets").tabItem {
-                Image(systemName: "checkmark.square")
-                    .symbolVariant(.none)
-                Text("My Bets")
+            ForEach(Tab.allCases, id: \.self) { tab in
+                tab.view
+                    .tabItem {
+                        tab.icon
+                        Text(tab.title)
+                    }
+                    .tag(tab)
             }
-            .tag(0)
-            
-            Text("All Matches").tabItem {
-                Image(systemName: "globe")
-                Text("All Matches")
-            }
-            .tag(1)
-            
-            Text("Menu").tabItem {
-                Text("Menu")
-            }
-            .tag(2)
-            
-            Text("Calendar").tabItem {
-                Image(systemName: "calendar")
-                Text("Calendar")
-            }
-            .tag(3)
-            
-            Text("Favourites").tabItem {
-                Image(systemName: "star")
-                Text("Favourites")
-            }
-            .tag(4)
         }
     }
 }
+
+// MARK: - Tabs
+
+private extension DashboardTabView.Tab {
+    var icon: Image? {
+        switch self {
+        case .myBets:
+            return Image(systemName: "checkmark.square")
+        case .allMatches:
+            return Image(systemName: "globe")
+        case .menu:
+            return nil
+        case .calendar:
+            return Image(systemName: "calendar")
+        case .favourites:
+            return Image(systemName: "star")
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .myBets:
+            return "My Bets"
+        case .allMatches:
+            return "All Matches"
+        case .menu:
+            return "Menu"
+        case .calendar:
+            return "Calendar"
+        case .favourites:
+            return "Favourites"
+        }
+    }
+    
+    @ViewBuilder
+    var view: some View {
+        switch self {
+        case .myBets:
+            Text("My Bets")
+        case .allMatches:
+            Text("All Matches")
+        case .menu:
+            Text("Menu")
+        case .calendar:
+            Text("Calendar")
+        case .favourites:
+            Text("Favourites")
+        }
+    }
+}
+
+// MARK: - Preview
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
