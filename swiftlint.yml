@@ -1,0 +1,117 @@
+excluded:
+  - .build
+  - .swiftpm
+  - ./*/Package.swift
+  - ./*/Tests
+
+opt_in_rules:
+    - attributes
+    # - closure_body_length # Needs to be disabled for the Presentation
+    - closure_end_indentation
+    - closure_spacing
+    - collection_alignment
+    - conditional_returns_on_newline
+    - contains_over_filter_count
+    - contains_over_filter_is_empty
+    - contains_over_first_not_nil
+    - discarded_notification_center_observer
+    - empty_collection_literal
+    - empty_count
+    - empty_string
+    - explicit_init
+    - extension_access_modifier
+    - fallthrough
+    - fatal_error_message
+    - file_header
+    - file_name_no_space
+    - first_where
+    - force_unwrapping
+    - implicit_return
+    - last_where
+    - let_var_whitespace
+    - literal_expression_end_indentation
+    - missing_docs
+    - multiline_arguments
+    - multiline_arguments_brackets
+    - multiline_function_chains
+    - multiline_literal_brackets
+    - multiline_parameters
+    - multiline_parameters_brackets
+    # - no_magic_numbers # not in a stable release
+    - operator_usage_whitespace
+    - pattern_matching_keywords
+    - prefer_zero_over_explicit_init
+    - private_subject
+    - redundant_nil_coalescing
+    - redundant_type_annotation
+    # - shorthand_optional_binding # not in a stable release
+    - sorted_first_last
+    - sorted_imports
+    - switch_case_on_newline
+    - toggle_bool
+    - trailing_closure
+    - unneeded_parentheses_in_closure_argument
+    - unused_declaration
+    - unused_import
+    - vertical_parameter_alignment_on_call
+    - vertical_whitespace_closing_braces
+    - vertical_whitespace_opening_braces
+    - yoda_condition
+
+disabled_rules:
+    - todo
+    - identifier_name
+    - type_body_length
+
+line_length:
+    warning: 230
+    error: 280
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_interpolated_strings: true
+    ignores_urls: true
+    
+file_length:
+    warning: 700
+    error: 800
+    
+function_body_length:
+    warning: 100
+    error: 100
+    
+type_name:
+    allowed_symbols: "_"
+
+identifier_name:
+    allowed_symbols: "_"
+    min_length: 3
+    excluded:
+        - id
+        - up
+        
+nesting:
+  type_level:
+    warning: 3
+    error: 6
+  statement_level:
+    warning: 5
+    error: 10
+        
+function_parameter_count:
+    warning: 7
+    error: 8
+    ignores_default_parameters: true
+
+force_cast: warning
+force_try: warning
+
+file_header:
+    severity: error
+    required_pattern: |
+                      \/\/
+                      \/\/  .*?\.swift
+                      \/\/  .*?
+                      \/\/
+                      \/\/  Created by .*? on \d{2}\/\d{2}\/\d{4}\.
+                      \/\/  Copyright © \d{4} Samuel Kebis. All rights reserved.
+                      \/\/
