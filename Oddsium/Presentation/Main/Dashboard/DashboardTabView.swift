@@ -44,7 +44,8 @@ private extension DashboardTabView.Tab {
         case .allMatches:
             return Image(systemName: "globe")
         case .menu:
-            return nil
+            return Image("tabHome")
+                .renderingMode(.template)
         case .calendar:
             return Image(systemName: "calendar")
         case .favourites:
