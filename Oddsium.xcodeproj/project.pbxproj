@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2D42983C5B50056017F /* OddsiumApp.swift */; };
-		9438A2D72983C5B50056017F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2D62983C5B50056017F /* ContentView.swift */; };
 		9438A2D92983C5B70056017F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2D82983C5B70056017F /* Assets.xcassets */; };
 		9438A2DC2983C5B70056017F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9438A2DB2983C5B70056017F /* Preview Assets.xcassets */; };
+		9438A2E72983D25F0056017F /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2E62983D25E0056017F /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9438A2D12983C5B50056017F /* Oddsium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oddsium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9438A2D42983C5B50056017F /* OddsiumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddsiumApp.swift; sourceTree = "<group>"; };
-		9438A2D62983C5B50056017F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9438A2D82983C5B70056017F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9438A2DB2983C5B70056017F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9438A2E22983CED30056017F /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = text; path = Presentation; sourceTree = SOURCE_ROOT; };
+		9438A2E62983D25E0056017F /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +37,7 @@
 			children = (
 				9438A2D32983C5B50056017F /* Oddsium */,
 				9438A2D22983C5B50056017F /* Products */,
+				9438A2E32983D20F0056017F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +52,8 @@
 		9438A2D32983C5B50056017F /* Oddsium */ = {
 			isa = PBXGroup;
 			children = (
-				9438A2E22983CED30056017F /* Presentation */,
+				9438A2E82983D2710056017F /* Presentation */,
 				9438A2D42983C5B50056017F /* OddsiumApp.swift */,
-				9438A2D62983C5B50056017F /* ContentView.swift */,
 				9438A2D82983C5B70056017F /* Assets.xcassets */,
 				9438A2DA2983C5B70056017F /* Preview Content */,
 			);
@@ -67,6 +66,37 @@
 				9438A2DB2983C5B70056017F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9438A2E32983D20F0056017F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9438A2E82983D2710056017F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9438A2E92983D2790056017F /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9438A2E92983D2790056017F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9438A2EA2983D2800056017F /* Dashboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9438A2EA2983D2800056017F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9438A2E62983D25E0056017F /* DashboardView.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +115,8 @@
 			dependencies = (
 			);
 			name = Oddsium;
+			packageProductDependencies = (
+			);
 			productName = Oddsium;
 			productReference = 9438A2D12983C5B50056017F /* Oddsium.app */;
 			productType = "com.apple.product-type.application";
@@ -139,7 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9438A2D72983C5B50056017F /* ContentView.swift in Sources */,
+				9438A2E72983D25F0056017F /* DashboardView.swift in Sources */,
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
