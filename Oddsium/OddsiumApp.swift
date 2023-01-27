@@ -11,7 +11,7 @@ import SwiftUI
 struct OddsiumApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardTabView()
         }
     }
 }
