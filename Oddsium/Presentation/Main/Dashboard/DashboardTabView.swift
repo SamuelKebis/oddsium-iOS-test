@@ -19,7 +19,7 @@ extension DashboardTabView {
 
 struct DashboardTabView: View {
     @State private var selection: Tab = .calendar
-    
+
     var body: some View {
         TabView(selection: $selection) {
             ForEach(Tab.allCases, id: \.self) { tab in
@@ -52,7 +52,7 @@ private extension DashboardTabView.Tab {
             return Image(systemName: "star")
         }
     }
-    
+
     var title: String {
         switch self {
         case .myBets:
@@ -67,7 +67,7 @@ private extension DashboardTabView.Tab {
             return "Favourites"
         }
     }
-    
+
     @ViewBuilder
     var view: some View {
         switch self {
