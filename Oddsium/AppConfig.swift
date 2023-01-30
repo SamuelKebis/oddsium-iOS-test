@@ -14,8 +14,8 @@ struct AppConfig: Config {
     }
 
     private func injectServices(_ injector: Injector) {
-        injector.map(Network.self) {
-            return Network()
+        injector.map(ApiService.self) {
+            return DefaultApiService()
         }
     }
 }

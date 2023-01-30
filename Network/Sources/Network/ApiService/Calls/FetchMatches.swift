@@ -9,7 +9,7 @@ import Combine
 import Domain
 import Foundation
 
-extension Network {
+extension DefaultApiService {
     public func fetchMatches(
         date: String,
         sport: Int,
@@ -22,8 +22,8 @@ extension Network {
             ("countrycode", countryCode),
             ("timezone", timeZone)
         ]
-        let parameters = Network.stringFromParameters(parametersDictionary)
-        let urlString = Network.baseUrl + "/matches?" + parameters
+        let parameters = DefaultApiService.stringFromParameters(parametersDictionary)
+        let urlString = DefaultApiService.baseUrl + "/matches?" + parameters
 
         guard let url = URL(string: urlString) else {
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
@@ -31,7 +31,7 @@ extension Network {
 
         return URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { data, response in
-                guard Network.validateResponse(response) else {
+                guard DefaultApiService.validateResponse(response) else {
                     throw NetworkError.invalidResponse
                 }
 

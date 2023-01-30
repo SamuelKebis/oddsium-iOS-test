@@ -1,5 +1,5 @@
 //
-//  Network.swift
+//  DefaultApiService.swift
 //  
 //
 //  Created by Samuel Kebis on 30/01/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Network {
+public class DefaultApiService: ApiService {
     static let baseUrl = "https://psydreus.oddsium.com"
 
     public init() {}
@@ -27,9 +27,4 @@ public class Network {
             .joined(separator: "&")
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
     }
-}
-
-enum NetworkError: Error {
-    case invalidURL
-    case invalidResponse
 }
