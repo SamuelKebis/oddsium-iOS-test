@@ -40,16 +40,16 @@ private extension DashboardTabView.Tab {
     var icon: Image? {
         switch self {
         case .myBets:
-            return Image(systemName: "checkmark.square")
+            return Image(symbol: .checkmarkSquare)
         case .allMatches:
-            return Image(systemName: "globe")
+            return Image(symbol: .globe)
         case .menu:
             return Images.tabHome.swiftUIImage
                 .renderingMode(.template)
         case .calendar:
-            return Image(systemName: "calendar")
+            return Image(symbol: .calendar)
         case .favourites:
-            return Image(systemName: "star")
+            return Image(symbol: .star)
         }
     }
 
