@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct DayData {
-    let data: DayMatches
+public struct DayData: Decodable {
+    public let data: DayMatches
 }
