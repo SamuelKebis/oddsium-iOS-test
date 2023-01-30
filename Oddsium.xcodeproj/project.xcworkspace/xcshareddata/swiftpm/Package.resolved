@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "shortcut-foundation-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shortcut/shortcut-foundation-ios.git",
+      "state" : {
+        "revision" : "106a54467f0aacffdcf98a76969d60c16d980f16",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
