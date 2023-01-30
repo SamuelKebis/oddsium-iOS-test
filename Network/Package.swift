@@ -10,12 +10,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Network",
-            targets: ["Network"]),
+            targets: ["Network"])
     ],
     dependencies: [
-        .package(path: "../Domain"),
-        //.package(path: "ShortcutFoundation")
-        //.package(url: "https://github.com/shortcut/shortcut-foundation-ios.git", .upToNextMajor(from: "1.0.0"))
+        .package(path: "../Domain")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -27,6 +25,6 @@ let package = Package(
             ]),
         .testTarget(
             name: "NetworkTests",
-            dependencies: ["Network"]),
+            dependencies: ["Network"])
     ]
 )
