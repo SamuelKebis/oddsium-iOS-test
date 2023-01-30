@@ -40,47 +40,39 @@ private extension DashboardTabView.Tab {
     var icon: Image? {
         switch self {
         case .myBets:
-            return Image(systemName: "checkmark.square")
+            return Image(symbol: .checkmarkSquare)
         case .allMatches:
-            return Image(systemName: "globe")
+            return Image(symbol: .globe)
         case .menu:
-            return Image("tabHome")
+            return Images.tabHome.swiftUIImage
                 .renderingMode(.template)
         case .calendar:
-            return Image(systemName: "calendar")
+            return Image(symbol: .calendar)
         case .favourites:
-            return Image(systemName: "star")
+            return Image(symbol: .star)
         }
     }
 
     var title: String {
         switch self {
         case .myBets:
-            return "My Bets"
+            return Copy.Tab.myBets
         case .allMatches:
-            return "All Matches"
+            return Copy.Tab.allMatches
         case .menu:
-            return "Menu"
+            return Copy.Tab.menu
         case .calendar:
-            return "Calendar"
+            return Copy.Tab.calendar
         case .favourites:
-            return "Favourites"
+            return Copy.Tab.favourites
         }
     }
 
     @ViewBuilder
     var view: some View {
         switch self {
-        case .myBets:
-            Text("My Bets")
-        case .allMatches:
-            Text("All Matches")
-        case .menu:
-            Text("Menu")
-        case .calendar:
-            Text("Calendar")
-        case .favourites:
-            Text("Favourites")
+        default:
+            Text(title)
         }
     }
 }

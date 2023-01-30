@@ -1,0 +1,20 @@
+## Generate constants for your localized strings.
+##   Be sure that SwiftGen only parses ONE locale (typically Base.lproj, or en.lproj, or whichever your development region is); otherwise it will generate the same keys multiple times.
+##   SwiftGen will parse all `.strings` files found in that folder.
+
+ xcassets:
+   - inputs: Oddsium/Presentation/Resources/Images/Assets.xcassets
+     outputs:
+       - templateName: swift5
+         output: Oddsium/Presentation/Resources/Images/Assets+Generated.swift
+         params:
+           enumName: Images
+
+ strings:
+   inputs:
+     - Oddsium/Presentation/Resources/Strings/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Oddsium/Presentation/Resources/Strings/Strings+Generated.swift
+       params:
+         enumName: Copy
