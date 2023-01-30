@@ -31,6 +31,7 @@
 		9438A2FC29841F690056017F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		9438A2FE298420260056017F /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		9438A3012987B2D00056017F /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
+		9438A3062987BE760056017F /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 		9438A2C82983C5B50056017F = {
 			isa = PBXGroup;
 			children = (
+				9438A3062987BE760056017F /* Domain */,
 				9438A2D32983C5B50056017F /* Oddsium */,
 				9438A2D22983C5B50056017F /* Products */,
 				9438A2E32983D20F0056017F /* Frameworks */,
