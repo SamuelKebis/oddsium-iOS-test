@@ -7,8 +7,8 @@
 
 import Foundation
 
-public struct Score {
-    public let htScore: String
-    public let atScore: String
-    public let scoreDetails: String
+public struct Score: Decodable {
+    public let htScore: String?
+    public let atScore: String?
+    public let scoreDetails: String?
 }

@@ -18,6 +18,7 @@
 		9438A2FF298420260056017F /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A2FE298420260056017F /* Strings+Generated.swift */; };
 		9438A3022987B2D00056017F /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A3012987B2D00056017F /* SFSymbol.swift */; };
 		9438A3082987CA050056017F /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A3072987CA050056017F /* Domain */; };
+		9438A30E2987D8DD0056017F /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A30D2987D8DD0056017F /* Network */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9438A2FE298420260056017F /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		9438A3012987B2D00056017F /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
 		9438A3062987BE760056017F /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		9438A30C2987D7FF0056017F /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9438A30E2987D8DD0056017F /* Network in Frameworks */,
 				9438A3082987CA050056017F /* Domain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +53,7 @@
 		9438A2C82983C5B50056017F = {
 			isa = PBXGroup;
 			children = (
+				9438A30C2987D7FF0056017F /* Network */,
 				9438A3062987BE760056017F /* Domain */,
 				9438A2D32983C5B50056017F /* Oddsium */,
 				9438A2D22983C5B50056017F /* Products */,
@@ -181,6 +185,7 @@
 			name = Oddsium;
 			packageProductDependencies = (
 				9438A3072987CA050056017F /* Domain */,
+				9438A30D2987D8DD0056017F /* Network */,
 			);
 			productName = Oddsium;
 			productReference = 9438A2D12983C5B50056017F /* Oddsium.app */;
@@ -210,6 +215,8 @@
 				Base,
 			);
 			mainGroup = 9438A2C82983C5B50056017F;
+			packageReferences = (
+			);
 			productRefGroup = 9438A2D22983C5B50056017F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -506,6 +513,10 @@
 		9438A3072987CA050056017F /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		9438A30D2987D8DD0056017F /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

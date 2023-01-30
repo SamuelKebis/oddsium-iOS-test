@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct DayMatches {
+public struct DayMatches: Decodable {
     public let identifier: String
     public let matches: [Match]
-    public let tournamentName: String
-    public let tournamentFlagURL: String
-    public let tournamentStartDate: String
-    public let tournamentEndDate: String
-    public let tableLabels: String
+    public let tournamentName: String?
+    public let tournamentFlagURL: String?
+    public let tournamentStartDate: String?
+    public let tournamentEndDate: String?
+    public let tableLabels: String?
 }
