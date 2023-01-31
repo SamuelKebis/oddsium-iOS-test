@@ -24,7 +24,14 @@ public extension Date {
     func asString(_ format: AsStringFormat) -> String {
         switch format {
         case .dayOfWeek:
-            return isToday ? "Today" : formatted(Date.FormatStyle().weekday(.wide))
+            if isToday {
+                return "Today"
+            } else if wasYesterday {
+                return "Yesterday"
+            } else if isTomorrow {
+                return "Tomorrow"
+            }
+            return formatted(Date.FormatStyle().weekday(.wide))
 
         case .monthAndDay:
             let formatter = DateFormatter()
