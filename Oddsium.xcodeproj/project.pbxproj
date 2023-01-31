@@ -19,8 +19,13 @@
 		9438A3022987B2D00056017F /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A3012987B2D00056017F /* SFSymbol.swift */; };
 		9438A3082987CA050056017F /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A3072987CA050056017F /* Domain */; };
 		9438A30E2987D8DD0056017F /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A30D2987D8DD0056017F /* Network */; };
+		948352572989386900BC2EC6 /* DayIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948352562989386900BC2EC6 /* DayIndexViewModel.swift */; };
 		94F72EDF298817FB0013114D /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 94F72EDE298817FB0013114D /* ShortcutFoundation */; };
 		94F72EE12988188C0013114D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE02988188C0013114D /* AppConfig.swift */; };
+		94F72EE42988FE570013114D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE32988FE570013114D /* CalendarView.swift */; };
+		94F72EE629890EEB0013114D /* DaySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE529890EEB0013114D /* DaySelectionView.swift */; };
+		94F72EE8298915CE0013114D /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE7298915CE0013114D /* CalendarViewModel.swift */; };
+		94F72EEB29891DDE0013114D /* DayIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EEA29891DDE0013114D /* DayIndexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +42,12 @@
 		9438A3012987B2D00056017F /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
 		9438A3062987BE760056017F /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		9438A30C2987D7FF0056017F /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
+		948352562989386900BC2EC6 /* DayIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayIndexViewModel.swift; sourceTree = "<group>"; };
 		94F72EE02988188C0013114D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		94F72EE32988FE570013114D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		94F72EE529890EEB0013114D /* DaySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionView.swift; sourceTree = "<group>"; };
+		94F72EE7298915CE0013114D /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		94F72EEA29891DDE0013114D /* DayIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayIndexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 		9438A2E92983D2790056017F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				94F72EE22988FE430013114D /* Calendar */,
 				9438A2EA2983D2800056017F /* Dashboard */,
 			);
 			path = Main;
@@ -168,6 +179,34 @@
 				9438A3012987B2D00056017F /* SFSymbol.swift */,
 			);
 			path = SFSymbol;
+			sourceTree = "<group>";
+		};
+		94835258298939DC00BC2EC6 /* DayIndex */ = {
+			isa = PBXGroup;
+			children = (
+				94F72EEA29891DDE0013114D /* DayIndexView.swift */,
+				948352562989386900BC2EC6 /* DayIndexViewModel.swift */,
+			);
+			path = DayIndex;
+			sourceTree = "<group>";
+		};
+		94F72EE22988FE430013114D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				94835258298939DC00BC2EC6 /* DayIndex */,
+				94F72EE9298917B30013114D /* Main */,
+				94F72EE529890EEB0013114D /* DaySelectionView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		94F72EE9298917B30013114D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94F72EE32988FE570013114D /* CalendarView.swift */,
+				94F72EE7298915CE0013114D /* CalendarViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948352572989386900BC2EC6 /* DayIndexViewModel.swift in Sources */,
+				94F72EE629890EEB0013114D /* DaySelectionView.swift in Sources */,
 				9438A2E72983D25F0056017F /* DashboardTabView.swift in Sources */,
+				94F72EE42988FE570013114D /* CalendarView.swift in Sources */,
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
 				9438A3022987B2D00056017F /* SFSymbol.swift in Sources */,
 				94F72EE12988188C0013114D /* AppConfig.swift in Sources */,
+				94F72EEB29891DDE0013114D /* DayIndexView.swift in Sources */,
+				94F72EE8298915CE0013114D /* CalendarViewModel.swift in Sources */,
 				9438A2FF298420260056017F /* Strings+Generated.swift in Sources */,
 				9438A2F529841AFB0056017F /* Assets+Generated.swift in Sources */,
 			);
