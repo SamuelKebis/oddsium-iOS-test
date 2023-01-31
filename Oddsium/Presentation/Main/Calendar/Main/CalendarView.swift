@@ -5,25 +5,26 @@
 //  Created by Samuel Kebis on 31/01/2023.
 //
 
+import ShortcutFoundation
 import SwiftUI
 
 struct CalendarView: View {
-    @State var selectedDay = 1
-    private let days: [(Color, Int)] = [(.green, 0), (.blue, 1), (.orange, 2), (.purple, 3)]
+    // swiftlint:disable:next identifier_name
+    @InjectObject private var vm: CalendarViewModel
 
     var body: some View {
         VStack {
             DaySelectionView(
-                selected: $selectedDay,
-                days: days
+                selected: $vm.selectedDay,
+                days: vm.days
             ) {
                 Circle()
-                    .foregroundColor(days[$0].0)
+                    .foregroundColor(vm.days[$0].0)
             }
             .frame(height: .selectionViewHeight)
 
-            TabView(selection: $selectedDay) {
-                ForEach(days, id: \.1) { (page, index) in
+            TabView(selection: $vm.selectedDay) {
+                ForEach(vm.days, id: \.1) { (page, index) in
                     Circle()
                         .foregroundColor(page)
                         .tag(index)
@@ -31,7 +32,7 @@ struct CalendarView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
         }
-        .animation(.default, value: selectedDay)
+        .animation(.default, value: vm.selectedDay)
     }
 }
 

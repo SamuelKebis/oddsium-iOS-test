@@ -23,6 +23,7 @@
 		94F72EE12988188C0013114D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE02988188C0013114D /* AppConfig.swift */; };
 		94F72EE42988FE570013114D /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE32988FE570013114D /* CalendarView.swift */; };
 		94F72EE629890EEB0013114D /* DaySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE529890EEB0013114D /* DaySelectionView.swift */; };
+		94F72EE8298915CE0013114D /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE7298915CE0013114D /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		94F72EE02988188C0013114D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		94F72EE32988FE570013114D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		94F72EE529890EEB0013114D /* DaySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectionView.swift; sourceTree = "<group>"; };
+		94F72EE7298915CE0013114D /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +180,19 @@
 		94F72EE22988FE430013114D /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				94F72EE32988FE570013114D /* CalendarView.swift */,
+				94F72EE9298917B30013114D /* Main */,
 				94F72EE529890EEB0013114D /* DaySelectionView.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		94F72EE9298917B30013114D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94F72EE32988FE570013114D /* CalendarView.swift */,
+				94F72EE7298915CE0013114D /* CalendarViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
 				9438A3022987B2D00056017F /* SFSymbol.swift in Sources */,
 				94F72EE12988188C0013114D /* AppConfig.swift in Sources */,
+				94F72EE8298915CE0013114D /* CalendarViewModel.swift in Sources */,
 				9438A2FF298420260056017F /* Strings+Generated.swift in Sources */,
 				9438A2F529841AFB0056017F /* Assets+Generated.swift in Sources */,
 			);
