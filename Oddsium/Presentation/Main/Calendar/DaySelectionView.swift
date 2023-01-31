@@ -7,31 +7,19 @@
 
 import SwiftUI
 
-struct DaySelectionView<T: View>: View {
+struct DaySelectionView: View {
     @Binding var selected: Int
 
-    var days: [(Color, Int)]
-
-    @ViewBuilder
-    var dayIndexView: (Int) -> T
+    let daysRange: Range<Int>
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: .dayIndexSpacing) {
-                ForEach(days, id: \.1) { (_, index) in
+                ForEach(daysRange, id: \.self) { index in
                     Button {
                         selected = index
                     } label: {
-                        VStack {
-                            dayIndexView(index)
-
-                            HStack {
-                                if selected == index {
-                                    Rectangle()
-                                }
-                            }
-                            .frame(height: .dayIndexSelectorHeight)
-                        }
+                        DayIndexView(dayShift: index, isSelected: index == selected)
                     }
                 }
             }
@@ -41,21 +29,16 @@ struct DaySelectionView<T: View>: View {
 
 private extension CGFloat {
     static let dayIndexSpacing: CGFloat = 8
-    static let dayIndexSelectorHeight: CGFloat = 8
 }
 
 // MARK: - Preview
 
 struct DaySelectionView_Previews: PreviewProvider {
-    static let days: [(Color, Int)] = [(.green, 0), (.blue, 1), (.orange, 2), (.purple, 3)]
     static var previews: some View {
         DaySelectionView(
             selected: .constant(1),
-            days: days
-        ) {
-            Circle()
-                .foregroundColor(days[$0].0)
-        }
+            daysRange: 0..<6
+        )
         .frame(height: 100)
     }
 }

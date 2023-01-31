@@ -16,17 +16,13 @@ struct CalendarView: View {
         VStack {
             DaySelectionView(
                 selected: $vm.selectedDay,
-                days: vm.days
-            ) {
-                Circle()
-                    .foregroundColor(vm.days[$0].0)
-            }
+                daysRange: vm.daysRange
+            )
             .frame(height: .selectionViewHeight)
 
             TabView(selection: $vm.selectedDay) {
-                ForEach(vm.days, id: \.1) { (page, index) in
-                    Circle()
-                        .foregroundColor(page)
+                ForEach(vm.daysRange, id: \.self) { index in
+                    Text("Day: \(index)")
                         .tag(index)
                 }
             }
