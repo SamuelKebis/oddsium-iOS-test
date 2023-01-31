@@ -19,8 +19,9 @@ struct DaySelectionView: View {
                     Button {
                         selected = index
                     } label: {
-                        DayIndexView(dayShift: index, isSelected: index == selected)
+                        DayIndexView(dayOffset: index, isSelected: index == selected)
                     }
+                    .frame(width: .dayIndexViewWidth)
                 }
             }
         }
@@ -29,6 +30,7 @@ struct DaySelectionView: View {
 
 private extension CGFloat {
     static let dayIndexSpacing: CGFloat = 8
+    static let dayIndexViewWidth: CGFloat = 100
 }
 
 // MARK: - Preview
@@ -36,8 +38,8 @@ private extension CGFloat {
 struct DaySelectionView_Previews: PreviewProvider {
     static var previews: some View {
         DaySelectionView(
-            selected: .constant(1),
-            daysRange: 0..<6
+            selected: .constant(0),
+            daysRange: -1..<6
         )
         .frame(height: 100)
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class CalendarViewModel: ObservableObject {
-    @Published var selectedDay = 1
+    @Published var selectedDay = 0
     let daysRange: Range<Int> = Int.maxPastDayToSee..<Int.maxFutureDayToSee
 }
 

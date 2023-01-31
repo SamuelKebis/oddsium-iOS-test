@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct DayIndexView: View {
-    var dayShift: Int
-    var isSelected: Bool
+    // swiftlint:disable:next identifier_name
+    let vm: DayIndexViewModel
+
+    init(dayOffset: Int, isSelected: Bool) {
+        vm = .init(dayOffset: dayOffset, isSelected: isSelected)
+    }
 
     var body: some View {
         VStack(spacing: .dayIndexSelectorSpacingFromTop) {
             ZStack {
                 Circle()
-                    .foregroundColor(isSelected ? .blue : .gray)
+                    .foregroundColor(vm.isSelected ? .blue : .gray)
 
-                Text("\(dayShift)")
+                Text("\(vm.dayOffset)")
                     .foregroundColor(.white)
             }
 
+            Text(vm.title)
+                .foregroundColor(.gray)
+
+            Text(vm.subtitle)
+                .foregroundColor(.gray)
+
             HStack {
-                if isSelected {
+                if vm.isSelected {
                     Rectangle()
                 }
             }
@@ -40,7 +50,7 @@ private extension CGFloat {
 
 struct DayIndexView_Previews: PreviewProvider {
     static var previews: some View {
-        DayIndexView(dayShift: 5, isSelected: false)
+        DayIndexView(dayOffset: 5, isSelected: false)
             .frame(height: 100)
     }
 }
