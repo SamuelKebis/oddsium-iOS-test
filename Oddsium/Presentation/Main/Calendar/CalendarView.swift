@@ -8,23 +8,34 @@
 import SwiftUI
 
 struct CalendarView: View {
-    @State var selectedPage = 1
-    private let pages: [(Color, Int)] = [(.green, 0), (.blue, 1), (.orange, 2), (.purple, 3)]
+    @State var selectedDay = 1
+    private let days: [(Color, Int)] = [(.green, 0), (.blue, 1), (.orange, 2), (.purple, 3)]
 
     var body: some View {
         VStack {
-            Rectangle()
-                .stroke()
-                .padding()
+            daysSelectionView()
+                .frame(height: 100)
 
-            TabView(selection: $selectedPage) {
-                ForEach(pages, id: \.1) { (page, index) in
+            TabView(selection: $selectedDay) {
+                ForEach(days, id: \.1) { (page, index) in
                     Circle()
                         .foregroundColor(page)
                         .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
+        }
+    }
+
+    @ViewBuilder
+    private func daysSelectionView() -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 8) {
+                ForEach(days, id: \.1) { (page, _) in
+                    Circle()
+                        .foregroundColor(page)
+                }
+            }
         }
     }
 }
