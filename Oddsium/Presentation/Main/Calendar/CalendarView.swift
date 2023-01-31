@@ -13,8 +13,14 @@ struct CalendarView: View {
 
     var body: some View {
         VStack {
-            daysSelectionView()
-                .frame(height: 100)
+            DaySelectionView(
+                selected: $selectedDay,
+                days: days
+            ) {
+                Circle()
+                    .foregroundColor(days[$0].0)
+            }
+            .frame(height: .selectionViewHeight)
 
             TabView(selection: $selectedDay) {
                 ForEach(days, id: \.1) { (page, index) in
@@ -25,20 +31,15 @@ struct CalendarView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
         }
-    }
-
-    @ViewBuilder
-    private func daysSelectionView() -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 8) {
-                ForEach(days, id: \.1) { (page, _) in
-                    Circle()
-                        .foregroundColor(page)
-                }
-            }
-        }
+        .animation(.default, value: selectedDay)
     }
 }
+
+private extension CGFloat {
+    static let selectionViewHeight: CGFloat = 100
+}
+
+// MARK: - Preview
 
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
