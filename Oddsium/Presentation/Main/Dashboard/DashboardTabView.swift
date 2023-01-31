@@ -71,6 +71,8 @@ private extension DashboardTabView.Tab {
     @ViewBuilder
     var view: some View {
         switch self {
+        case .calendar:
+            CalendarView()
         default:
             Text(title)
         }
