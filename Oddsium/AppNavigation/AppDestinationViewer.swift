@@ -11,13 +11,11 @@ import ShortcutFoundation
 import SwiftUI
 
 class AppDestinationViewer: DestinationViewer<Destination> {
-    @Inject var calendarNavigator: AppNavigator
-
     @ViewBuilder
     override func view(for destination: Destination) -> any View {
         switch destination {
         case .calendar:
-            calendarNavigator.rootView
+            CalendarView()
 
         case .match:
             Text("Match Detail")
