@@ -19,7 +19,14 @@ struct DayMatchesView: View {
     }
 
     var body: some View {
-        Text("First match: " + (dayMatches.matches.first?.name ?? "-"))
+        ScrollView(.vertical) {
+            LazyVStack(spacing: 4) {
+                ForEach(dayMatches.matches) {
+                    MatchRowView(match: $0)
+                        .padding(.horizontal, 4)
+                }
+            }
+        }
     }
 }
 
