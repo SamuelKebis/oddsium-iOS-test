@@ -5,6 +5,8 @@
 //  Created by Samuel Kebis on 27/01/2023.
 //
 
+import Navigation
+import ShortcutFoundation
 import SwiftUI
 
 extension DashboardTabView {
@@ -18,18 +20,29 @@ extension DashboardTabView {
 }
 
 struct DashboardTabView: View {
-    @State private var selection: Tab = .calendar
+    @InjectObject private var calendarNavigator: AppNavigator
+    @State var selection: DashboardTabView.Tab = .calendar
 
     var body: some View {
         TabView(selection: $selection) {
             ForEach(Tab.allCases, id: \.self) { tab in
-                tab.view
+                viewFor(tab)
                     .tabItem {
                         tab.icon
                         Text(tab.title)
                     }
                     .tag(tab)
             }
+        }
+    }
+
+    @ViewBuilder
+    func viewFor(_ tab: Tab) -> some View {
+        switch tab {
+        case .calendar:
+            calendarNavigator.rootView
+        default:
+            Text(tab.title)
         }
     }
 }
@@ -65,16 +78,6 @@ private extension DashboardTabView.Tab {
             return Copy.Tab.calendar
         case .favourites:
             return Copy.Tab.favourites
-        }
-    }
-
-    @ViewBuilder
-    var view: some View {
-        switch self {
-        case .calendar:
-            CalendarView()
-        default:
-            Text(title)
         }
     }
 }

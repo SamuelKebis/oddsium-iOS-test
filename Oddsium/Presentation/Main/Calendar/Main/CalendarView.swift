@@ -28,7 +28,6 @@ struct CalendarView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
         }
-        .animation(.default, value: vm.selectedDay)
     }
 }
 

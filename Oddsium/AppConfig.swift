@@ -7,6 +7,7 @@
 
 import DataLoader
 import ShortcutFoundation
+import Navigation
 import Network
 
 struct AppConfig: Config {
@@ -22,6 +23,10 @@ struct AppConfig: Config {
 
         injector.map(DataProvider.self) {
             return DataProvider()
+        }
+
+        injector.map(AppNavigator.self) {
+            AppNavigator(root: .calendar, viewer: AppDestinationViewer())
         }
     }
 
