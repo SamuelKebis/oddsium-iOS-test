@@ -30,6 +30,8 @@ class CalendarViewModel: ObservableObject {
         dataProvider.$dayData
             .receive(on: RunLoop.main)
             .assign(to: &$allDaysMatches)
+
+        dataProvider.getDataFor(selectedDay)
     }
 }
 
