@@ -5,6 +5,7 @@
 //  Created by Samuel Kebis on 2023-01-11.
 //  Copyright © 2022 Shortcut Scandinavia Apps AB. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import SwiftUI
 
