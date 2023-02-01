@@ -1,5 +1,5 @@
 //
-//  DayMatchesView.swift
+//  MatchesListView.swift
 //  Oddsium
 //
 //  Created by Samuel Kebis on 01/02/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Domain
 
-struct DayMatchesView: View {
+struct MatchesListView: View {
     let dayMatches: DayMatches
 
     init?(dayMatches: DayMatches?) {
@@ -32,6 +32,6 @@ struct DayMatchesView: View {
 
 struct DayMatchesView_Previews: PreviewProvider {
     static var previews: some View {
-        DayMatchesView(dayMatches: nil)
+        MatchesListView(dayMatches: nil)
     }
 }

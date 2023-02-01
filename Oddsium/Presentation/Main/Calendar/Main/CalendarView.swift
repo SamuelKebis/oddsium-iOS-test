@@ -22,7 +22,7 @@ struct CalendarView: View {
 
             TabView(selection: $vm.selectedDay) {
                 ForEach(vm.daysRange, id: \.self) { index in
-                    DayMatchesView(dayMatches: vm.currentDayMatches)
+                    MatchesListView(dayMatches: vm.currentDayMatches)
                     .tag(index)
                 }
             }
