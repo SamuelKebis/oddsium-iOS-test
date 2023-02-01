@@ -23,7 +23,7 @@ extension DefaultApiService {
             ("timezone", timeZone)
         ]
         let parameters = DefaultApiService.stringFromParameters(parametersDictionary)
-        let urlString = DefaultApiService.baseUrl + "/matches?" + parameters
+        let urlString = DefaultApiService.baseUrl + "/matches" + parameters
 
         guard let url = URL(string: urlString) else {
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
