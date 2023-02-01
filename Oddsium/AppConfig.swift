@@ -5,6 +5,7 @@
 //  Created by Samuel Kebis on 30/01/2023.
 //
 
+import DataLoader
 import ShortcutFoundation
 import Network
 
@@ -17,6 +18,10 @@ struct AppConfig: Config {
     private func injectServices(_ injector: Injector) {
         injector.map(ApiService.self) {
             return DefaultApiService()
+        }
+
+        injector.map(DataProvider.self) {
+            return DataProvider()
         }
     }
 

@@ -19,6 +19,10 @@
 		9438A3022987B2D00056017F /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A3012987B2D00056017F /* SFSymbol.swift */; };
 		9438A3082987CA050056017F /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A3072987CA050056017F /* Domain */; };
 		9438A30E2987D8DD0056017F /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A30D2987D8DD0056017F /* Network */; };
+		943A81F5298A5DA4005CE837 /* DataLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 943A81F4298A5DA4005CE837 /* DataLoader */; };
+		943A81F7298A6C92005CE837 /* MatchesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A81F6298A6C92005CE837 /* MatchesListView.swift */; };
+		943A81F9298A762E005CE837 /* MatchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A81F8298A762E005CE837 /* MatchRowView.swift */; };
+		943A81FC298A8CBD005CE837 /* MatchRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A81FB298A8CBD005CE837 /* MatchRowViewModel.swift */; };
 		948352572989386900BC2EC6 /* DayIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948352562989386900BC2EC6 /* DayIndexViewModel.swift */; };
 		94F72EDF298817FB0013114D /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 94F72EDE298817FB0013114D /* ShortcutFoundation */; };
 		94F72EE12988188C0013114D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE02988188C0013114D /* AppConfig.swift */; };
@@ -42,6 +46,10 @@
 		9438A3012987B2D00056017F /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
 		9438A3062987BE760056017F /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		9438A30C2987D7FF0056017F /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
+		943A81F3298A5A38005CE837 /* DataLoader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataLoader; sourceTree = "<group>"; };
+		943A81F6298A6C92005CE837 /* MatchesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesListView.swift; sourceTree = "<group>"; };
+		943A81F8298A762E005CE837 /* MatchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRowView.swift; sourceTree = "<group>"; };
+		943A81FB298A8CBD005CE837 /* MatchRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRowViewModel.swift; sourceTree = "<group>"; };
 		948352562989386900BC2EC6 /* DayIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayIndexViewModel.swift; sourceTree = "<group>"; };
 		94F72EE02988188C0013114D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		94F72EE32988FE570013114D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -58,6 +66,7 @@
 				94F72EDF298817FB0013114D /* ShortcutFoundation in Frameworks */,
 				9438A30E2987D8DD0056017F /* Network in Frameworks */,
 				9438A3082987CA050056017F /* Domain in Frameworks */,
+				943A81F5298A5DA4005CE837 /* DataLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +76,7 @@
 		9438A2C82983C5B50056017F = {
 			isa = PBXGroup;
 			children = (
+				943A81F3298A5A38005CE837 /* DataLoader */,
 				9438A30C2987D7FF0056017F /* Network */,
 				9438A3062987BE760056017F /* Domain */,
 				9438A2D32983C5B50056017F /* Oddsium */,
@@ -123,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				94F72EE22988FE430013114D /* Calendar */,
+				94F72EE529890EEB0013114D /* DaySelectionView.swift */,
+				943A81F6298A6C92005CE837 /* MatchesListView.swift */,
 				9438A2EA2983D2800056017F /* Dashboard */,
 			);
 			path = Main;
@@ -181,6 +193,15 @@
 			path = SFSymbol;
 			sourceTree = "<group>";
 		};
+		943A81FD298A8E6F005CE837 /* MatchRow */ = {
+			isa = PBXGroup;
+			children = (
+				943A81F8298A762E005CE837 /* MatchRowView.swift */,
+				943A81FB298A8CBD005CE837 /* MatchRowViewModel.swift */,
+			);
+			path = MatchRow;
+			sourceTree = "<group>";
+		};
 		94835258298939DC00BC2EC6 /* DayIndex */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +216,7 @@
 			children = (
 				94835258298939DC00BC2EC6 /* DayIndex */,
 				94F72EE9298917B30013114D /* Main */,
-				94F72EE529890EEB0013114D /* DaySelectionView.swift */,
+				943A81FD298A8E6F005CE837 /* MatchRow */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -231,6 +252,7 @@
 				9438A3072987CA050056017F /* Domain */,
 				9438A30D2987D8DD0056017F /* Network */,
 				94F72EDE298817FB0013114D /* ShortcutFoundation */,
+				943A81F4298A5DA4005CE837 /* DataLoader */,
 			);
 			productName = Oddsium;
 			productReference = 9438A2D12983C5B50056017F /* Oddsium.app */;
@@ -334,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				948352572989386900BC2EC6 /* DayIndexViewModel.swift in Sources */,
+				943A81F7298A6C92005CE837 /* MatchesListView.swift in Sources */,
 				94F72EE629890EEB0013114D /* DaySelectionView.swift in Sources */,
+				943A81F9298A762E005CE837 /* MatchRowView.swift in Sources */,
 				9438A2E72983D25F0056017F /* DashboardTabView.swift in Sources */,
 				94F72EE42988FE570013114D /* CalendarView.swift in Sources */,
 				9438A2D52983C5B50056017F /* OddsiumApp.swift in Sources */,
@@ -344,6 +368,7 @@
 				94F72EE8298915CE0013114D /* CalendarViewModel.swift in Sources */,
 				9438A2FF298420260056017F /* Strings+Generated.swift in Sources */,
 				9438A2F529841AFB0056017F /* Assets+Generated.swift in Sources */,
+				943A81FC298A8CBD005CE837 /* MatchRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +606,10 @@
 		9438A30D2987D8DD0056017F /* Network */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Network;
+		};
+		943A81F4298A5DA4005CE837 /* DataLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLoader;
 		};
 		94F72EDE298817FB0013114D /* ShortcutFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

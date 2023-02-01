@@ -19,6 +19,10 @@ public extension Date {
         case dayOfWeek
         /// Example: "Nov 12"
         case monthAndDay
+        // Example: "2023-02-06"
+        case apiRequest
+        // Example: "Mon, Dec 13, 20:00"
+        case matchHeader
     }
 
     func asString(_ format: AsStringFormat) -> String {
@@ -34,9 +38,19 @@ public extension Date {
             return formatted(Date.FormatStyle().weekday(.wide))
 
         case .monthAndDay:
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MMM d"
-            return formatter.string(from: self)
+            return toString("MMM d")
+
+        case .apiRequest:
+            return toString("yyyy-MM-dd")
+
+        case .matchHeader:
+            return toString("E, MMM dd, hh:mm")
         }
+    }
+
+    private func toString(_ stringFormat: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = stringFormat
+        return formatter.string(from: self)
     }
 }
