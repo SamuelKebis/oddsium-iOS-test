@@ -19,6 +19,7 @@
 		9438A3022987B2D00056017F /* SFSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438A3012987B2D00056017F /* SFSymbol.swift */; };
 		9438A3082987CA050056017F /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A3072987CA050056017F /* Domain */; };
 		9438A30E2987D8DD0056017F /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 9438A30D2987D8DD0056017F /* Network */; };
+		943A81F5298A5DA4005CE837 /* DataLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 943A81F4298A5DA4005CE837 /* DataLoader */; };
 		948352572989386900BC2EC6 /* DayIndexViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948352562989386900BC2EC6 /* DayIndexViewModel.swift */; };
 		94F72EDF298817FB0013114D /* ShortcutFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 94F72EDE298817FB0013114D /* ShortcutFoundation */; };
 		94F72EE12988188C0013114D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F72EE02988188C0013114D /* AppConfig.swift */; };
@@ -42,6 +43,7 @@
 		9438A3012987B2D00056017F /* SFSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbol.swift; sourceTree = "<group>"; };
 		9438A3062987BE760056017F /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		9438A30C2987D7FF0056017F /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
+		943A81F3298A5A38005CE837 /* DataLoader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DataLoader; sourceTree = "<group>"; };
 		948352562989386900BC2EC6 /* DayIndexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayIndexViewModel.swift; sourceTree = "<group>"; };
 		94F72EE02988188C0013114D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		94F72EE32988FE570013114D /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				94F72EDF298817FB0013114D /* ShortcutFoundation in Frameworks */,
 				9438A30E2987D8DD0056017F /* Network in Frameworks */,
 				9438A3082987CA050056017F /* Domain in Frameworks */,
+				943A81F5298A5DA4005CE837 /* DataLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		9438A2C82983C5B50056017F = {
 			isa = PBXGroup;
 			children = (
+				943A81F3298A5A38005CE837 /* DataLoader */,
 				9438A30C2987D7FF0056017F /* Network */,
 				9438A3062987BE760056017F /* Domain */,
 				9438A2D32983C5B50056017F /* Oddsium */,
@@ -231,6 +235,7 @@
 				9438A3072987CA050056017F /* Domain */,
 				9438A30D2987D8DD0056017F /* Network */,
 				94F72EDE298817FB0013114D /* ShortcutFoundation */,
+				943A81F4298A5DA4005CE837 /* DataLoader */,
 			);
 			productName = Oddsium;
 			productReference = 9438A2D12983C5B50056017F /* Oddsium.app */;
@@ -581,6 +586,10 @@
 		9438A30D2987D8DD0056017F /* Network */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Network;
+		};
+		943A81F4298A5DA4005CE837 /* DataLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DataLoader;
 		};
 		94F72EDE298817FB0013114D /* ShortcutFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
