@@ -9,7 +9,12 @@ import Domain
 import SwiftUI
 
 struct MatchRowView: View {
-    let match: Match
+    // swiftlint:disable:next identifier_name
+    let vm: MatchRowViewModel
+
+    init(match: Match) {
+        self.vm = .init(match: match)
+    }
 
     var body: some View {
         ZStack {
@@ -17,11 +22,11 @@ struct MatchRowView: View {
                 .foregroundColor(.gray)
 
             VStack {
-                Text(match.name)
+                Text(vm.title)
 
-                Text(match.date)
+                Text(vm.date)
 
-                Text(match.status.rawValue)
+                Text(vm.description)
             }
         }
         .frame(maxWidth: .infinity)
