@@ -22,8 +22,12 @@ struct CalendarView: View {
 
             TabView(selection: $vm.selectedDay) {
                 ForEach(vm.daysRange, id: \.self) { index in
-                    Text("Day: \(index)")
-                        .tag(index)
+                    VStack {
+                        Text("Day: \(index)")
+
+                        Text(vm.matchString)
+                    }
+                    .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
