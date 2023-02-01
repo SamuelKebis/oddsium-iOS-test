@@ -16,16 +16,18 @@ extension DefaultApiService {
         countryCode: String,
         timeZone: String
     ) -> AnyPublisher<DayData, Error> {
-        let parametersDictionary: [(String, String)] = [
-            ("date", date),
-            ("sport", String(sport)),
-            ("countrycode", countryCode),
-            ("timezone", timeZone)
+        var components = URLComponents()
+        components.scheme = DefaultApiService.scheme
+        components.host = DefaultApiService.host
+        components.path = "/matches"
+        components.queryItems = [
+            .init(name: "date", value: date),
+            .init(name: "sport", value: String(sport)),
+            .init(name: "countrycode", value: countryCode),
+            .init(name: "timezone", value: timeZone)
         ]
-        let parameters = DefaultApiService.stringFromParameters(parametersDictionary)
-        let urlString = DefaultApiService.baseUrl + "/matches?" + parameters
 
-        guard let url = URL(string: urlString) else {
+        guard let url = components.url else {
             return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
         }
 
