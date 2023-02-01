@@ -8,7 +8,8 @@
 import Foundation
 
 public class DefaultApiService: ApiService {
-    static let baseUrl = "https://psydreus.oddsium.com"
+    static let scheme = "https"
+    static let host = "psydreus.oddsium.com"
 
     public init() {}
 
@@ -19,12 +20,5 @@ public class DefaultApiService: ApiService {
         }
 
         return true
-    }
-
-    static func stringFromParameters(_ parameters: [(String, String)]) -> String {
-        "?" + (parameters
-            .map { "\($0)=\($1)" }
-            .joined(separator: "&")
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
     }
 }
