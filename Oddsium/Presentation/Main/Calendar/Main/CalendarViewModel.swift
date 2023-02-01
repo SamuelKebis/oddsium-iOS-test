@@ -13,7 +13,7 @@ import SwiftUI
 class CalendarViewModel: ObservableObject {
     @InjectObject var dataProvider: DataProvider
 
-    @Published var matches: [Int: DayData] = [:]
+    @Published var allDaysMatches: [Int: DayData] = [:]
     @Published var selectedDay = 0 {
         didSet {
             dataProvider.getDataFor(selectedDay)
@@ -22,14 +22,14 @@ class CalendarViewModel: ObservableObject {
 
     let daysRange: Range<Int> = Int.maxPastDayToSee..<Int.maxFutureDayToSee
 
-    var matchString: String {
-        matches[selectedDay]?.data.matches.first?.name ?? "-"
+    var currentDayMatches: DayMatches? {
+        allDaysMatches[selectedDay]?.data
     }
 
     init() {
         dataProvider.$dayData
             .receive(on: RunLoop.main)
-            .assign(to: &$matches)
+            .assign(to: &$allDaysMatches)
     }
 }
 
